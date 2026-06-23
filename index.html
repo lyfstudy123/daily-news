@@ -2,14 +2,17 @@
 <html lang="zh-CN">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">`n  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">`n  <meta http-equiv="Pragma" content="no-cache">`n  <meta http-equiv="Expires" content="0">
-  <title>每日早报 - 2026-06-23 规则重抓版</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  <title>每日中报 - 2026-06-23 AI、科技与电商</title>
   <style>
     :root { --ink:#18202a; --muted:#66717f; --line:#d8e0e8; --soft:#f6f8fb; --accent:#0f6f7c; --accent2:#9a5b18; --bg:#fff; }
     * { box-sizing:border-box; }
     body { margin:0; color:var(--ink); background:#edf1f5; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Microsoft YaHei",Arial,sans-serif; line-height:1.68; }
     .page { max-width:980px; margin:24px auto; background:var(--bg); border:1px solid var(--line); padding:34px 42px 46px; }
-    h1 { margin:0 0 8px; font-size:30px; line-height:1.22; letter-spacing:0; }
+    h1 { margin:0 0 8px; font-size:30px; line-height:1.22; }
     h2 { margin:34px 0 14px; padding-top:18px; border-top:2px solid var(--line); font-size:21px; }
     h3 { margin:20px 0 7px; font-size:17px; line-height:1.4; }
     p { margin:7px 0; }
@@ -37,7 +40,14 @@
     .progress { display:grid; grid-template-columns:auto 1fr auto; gap:10px; align-items:center; margin-top:10px; color:var(--muted); font-size:13px; }
     input[type="range"] { width:100%; accent-color:var(--accent); }
     footer { margin-top:34px; padding-top:18px; border-top:1px solid var(--line); color:var(--muted); font-size:13px; }
-    @media (max-width:720px) { .page { margin:0; border:0; padding:22px 18px 34px; } .controls { margin:-22px -18px 22px; padding:12px 18px; } h1 { font-size:24px; } .weather { grid-template-columns:1fr; } .weather-now { border-right:0; border-bottom:1px solid var(--line); } .controls-row button,.controls-row select { flex:1 1 auto; min-width:96px; } }
+    @media (max-width:720px) {
+      .page { margin:0; border:0; padding:22px 18px 34px; }
+      .controls { margin:-22px -18px 22px; padding:12px 18px; }
+      h1 { font-size:24px; }
+      .weather { grid-template-columns:1fr; }
+      .weather-now { border-right:0; border-bottom:1px solid var(--line); }
+      .controls-row button,.controls-row select { flex:1 1 auto; min-width:96px; }
+    }
   </style>
 </head>
 <body>
@@ -51,7 +61,7 @@
         <select id="styleSelect" title="播报风格">
           <option value="calm">柔和清晰</option>
           <option value="news">新闻播报</option>
-          <option value="bright">清脆自然</option>
+          <option value="bright">明快自然</option>
         </select>
         <button class="rateBtn" data-rate="0.85">0.85x</button>
         <button class="rateBtn active" data-rate="1">1x</button>
@@ -67,51 +77,85 @@
       </div>
     </section>
 
-    <h1>每日早报：AI、科技与电商</h1>
-    <div class="meta">2026年06月23日 早间规则重抓版 · 更新时间：2026-06-23 10:15 · 仅收录 06月22日晚间与06月23日信息源 · 国内外AI、科技、电商各不超过5条</div>
+    <h1>每日中报：AI、科技与电商</h1>
+    <div class="meta">2026年6月23日中报 · 更新时间：2026-06-23 12:33 · 时间窗口：2026-06-23 00:00-12:33（Asia/Shanghai） · 已按标题与 URL 对早报和历史记录去重 · 版本：20260623-1233-noon</div>
 
-    <section class="brief" id="readableIntro">
-      <strong>今日主线：</strong>本版按你刚给的新规则重新抓取：早报只取06月22日晚间与06月23日；每个类目最多5条；标题全部直达正文页；国外资讯用中文总结；去掉旧内容和重复内容。AI覆盖字节、京东、智谱/MiniMax、微软与国产模型开源；科技覆盖光模块、芯片、SpaceX、Apple争议与实时视频模型；电商覆盖Amazon、Walmart、国内618履约、AI支付和直播电商治理。
+    <section class="brief readable" id="readableIntro">
+      <strong>中午主线：</strong>今天上午的新信息主要集中在三条线上：一是字节豆包、智谱和 OpenAI 都在加快把模型能力从“能答题”推向“能落地”；二是微软、Meta、NVIDIA 把 AI 投资继续压到基础设施和终端入口；三是电商进入“流量精细化”和“高客单升级”并行阶段，国内 618 复盘和海外 Prime Day 拉新同步展开。
     </section>
 
     <section class="weather">
       <div class="weather-now">
-        <div class="weather-title">洛阳偃师 · 今日天气</div>
-        <div class="weather-temp">约 21-30°C</div>
-        <p>早间以多云到阴为主，体感偏闷，午后注意防晒和补水。</p>
+        <div class="weather-title">洛阳偃师 · 天气参考</div>
+        <div class="weather-temp">当前约 27°C，阴天</div>
+        <p>今天以多云到阴为主，参考高温 28°C、低温 19°C。午后体感偏闷，外出注意补水。</p>
       </div>
       <div class="weather-days">
-        <p><span class="tag">出行</span>上午通勤整体可行，带伞更稳妥。</p>
-        <p><span class="tag">穿衣</span>短袖为主，室内空调环境可备薄外套。</p>
-        <p><span class="tag">提醒</span>夏季午后天气变化快，外出留意临近预报。</p>
+        <p><span class="tag">明日</span>6月24日高温约 32°C，晴间多云，日照增强。</p>
+        <p><span class="tag">后日</span>6月25日高温约 31°C，晴间多云，适合通勤但需防晒。</p>
+        <p><span class="tag">提醒</span>偃师本地天气以洛阳城区预报作参考，午间和傍晚温差较明显。</p>
       </div>
     </section>
 
-    <h2>AI（国内外）</h2>
-    <article class="item readable"><div class="time">06月23日 06:30 · 每日经济新闻</div><h3><a href="https://www.nbd.com.cn/articles/2026-06-22/4433427.html" target="_blank" rel="noopener">豆包App灰测打车出行；京东开源实时视频视觉语言交互模型JoyAI-VL-Interaction</a></h3><p class="summary">豆包在北京、杭州灰测一键打车，体现字节把 AI 对话入口接入本地生活；京东开源实时视频视觉语言交互模型，说明电商平台的 AI 布局正在从导购延伸到实时多模态交互。</p></article>
-    <article class="item readable"><div class="time">06月22日 23:03 · 每日经济新闻</div><h3><a href="https://www.nbd.com.cn/articles/2026-06-22/4433512.html" target="_blank" rel="noopener">智谱反超MiniMax拉开超4倍市值差距，港股“AI双雄”迎流动性定价大考</a></h3><p class="summary">智谱市值首破万亿港元，MiniMax聚焦多模态应用但估值差距拉大。资本市场开始用商业化叙事、模型基座能力和限售解禁压力重新给本土 AI 公司定价。</p></article>
-    <article class="item readable"><div class="time">06月22日 20:35 · 21财经/科创板日报</div><h3><a href="https://www.21jingji.com/article/20260622/herald/f1c875ab8f7bba496441b72733aa5bc9.html" target="_blank" rel="noopener">微软：“卷”大模型没用，选择和低价才是王道</a></h3><p class="summary">纳德拉强调 AI 竞争将从单一前沿模型转向多模型选择、低成本和更强用户控制权。企业采购会更关注可替换性、价格和合规，而不只是参数和榜单。</p></article>
-    <article class="item readable"><div class="time">06月22日 19:52 · 中财网</div><h3><a href="https://www.cfi.net.cn/p20260622002324.html" target="_blank" rel="noopener">AI模型开源提速：智谱GLM-5.2与MiniMax M3推动应用落地</a></h3><p class="summary">国产大模型继续在 Coding、长上下文和多模态方向开源提速，降低开发门槛，也带动 AI 眼镜、智能硬件和企业 Agent 等应用落地。</p></article>
-    <article class="item readable"><div class="time">06月23日 · Anthropic / The Guardian</div><h3><a href="https://www.theguardian.com/technology/2026/jun/22/anthropic-claude-fable-ai-model-artificial-intelligence-national-security" target="_blank" rel="noopener">五眼联盟警告：前沿 AI 模型或在数月内显著提升网络攻击能力</a></h3><p class="summary">海外监管和安全机构把前沿模型的网络攻防能力列为高风险议题。对企业而言，AI 安全已经从技术团队问题上升为管理层和业务连续性问题。</p></article>
+    <h2>AI（国内外合计 3 条）</h2>
+    <article class="item readable">
+      <div class="time">06月23日 10:32 · 证券时报</div>
+      <h3><a href="https://www.stcn.com/article/detail/3973860.html" target="_blank" rel="noopener">字节跳动发布豆包大模型 2.1 Pro</a></h3>
+      <p class="summary">火山引擎在 Force 原动力大会上发布豆包大模型 2.1 Pro，强调更强的需求理解、长期规划、编程与 Agent 交付能力。对国内 AI 竞争来说，这意味着字节在把模型能力继续往企业生产力和自动化执行场景推进。</p>
+    </article>
+    <article class="item readable">
+      <div class="time">06月23日 09:23 · 观察者网 / 新浪财经</div>
+      <h3><a href="https://finance.sina.com.cn/roll/2026-06-23/doc-iniekeez8778267.shtml" target="_blank" rel="noopener">智谱回应马斯克：比你想得快</a></h3>
+      <p class="summary">围绕 GLM-5.2 与海外前沿模型差距，智谱联合创始人唐杰公开回应马斯克“中国模型追赶不会等到 2027 年一季度”。这条信号强化了国产大模型在性能追赶、资本叙事和开发者心智上的进攻姿态。</p>
+    </article>
+    <article class="item readable">
+      <div class="time">06月22日（海外原站日期） · OpenAI</div>
+      <h3><a href="https://openai.com/index/daybreak-securing-the-world/" target="_blank" rel="noopener">OpenAI 发布 Daybreak 安全计划，推进漏洞修复自动化</a></h3>
+      <p class="summary">OpenAI 发布 Daybreak，更新 Codex Security、开放完整版 GPT-5.5-Cyber，并联合安全伙伴推动“从发现漏洞到生成补丁”的自动化流程。对企业安全团队来说，重点已经从“多发现漏洞”转向“更快落补丁”。</p>
+    </article>
 
-    <h2>科技（国内外）</h2>
-    <article class="item readable"><div class="time">06月23日 · 36氪</div><h3><a href="https://www.36kr.com/p/3864896857936898" target="_blank" rel="noopener">从华尔街到A股，为啥全世界都在赌光模块？</a></h3><p class="summary">AI 数据中心扩张带动高速互连需求，光模块成为算力基础设施中最受资本追逐的环节之一，市场重点从需求验证转向高端产品交付能力。</p></article>
-    <article class="item readable"><div class="time">06月23日 · 36氪</div><h3><a href="https://www.36kr.com/p/3864923039945734" target="_blank" rel="noopener">伯恩斯坦资深分析师：我们正处在第一次真正的芯片超级周期</a></h3><p class="summary">AI 算力、存储、先进封装和网络设备共同推动半导体需求扩张，本轮周期更像由云和 AI 投资驱动的结构性扩张，而非传统消费电子周期。</p></article>
-    <article class="item readable"><div class="time">06月22日 22:29 · 每日经济新闻</div><h3><a href="https://www.nbd.com.cn/articles/2026-06-22/4433607.html" target="_blank" rel="noopener">SpaceX下挫，存储芯片股爆发：美股科技线索分化</a></h3><p class="summary">SpaceX因债券发行和偿还贷款计划承压，盘中跌幅扩大；同时美光、闪迪等存储芯片股走强，说明 AI 基础设施链条内部也在出现资金分化。</p></article>
-    <article class="item readable"><div class="time">06月22日晚 · 每日经济新闻</div><h3><a href="https://www.nbd.com.cn/articles/2026-06-22/4433380.html" target="_blank" rel="noopener">“苹果税”争议再起：48名中国开发者联名举报</a></h3><p class="summary">中国开发者围绕 Apple 应用商店费率与承诺发起联名举报。平台生态、抽佣规则和开发者利益分配，仍是移动互联网基础设施层面的关键争议。</p></article>
-    <article class="item readable"><div class="time">06月23日 · 36氪</div><h3><a href="https://www.36kr.com/p/3864388536679049" target="_blank" rel="noopener">第二代豆包AI手机定了，这次它不仅能替你点屏幕</a></h3><p class="summary">AI 手机从语音助手走向跨应用执行，核心看点是端侧权限、任务可靠性和用户是否愿意把高频操作交给 Agent。手机厂商和模型公司会继续争夺入口。</p></article>
+    <h2>科技（国内外合计 3 条）</h2>
+    <article class="item readable">
+      <div class="time">06月22日（海外原站日期） · Microsoft</div>
+      <h3><a href="https://blogs.microsoft.com/blog/2026/06/22/powering-the-next-wave-of-ai-expanding-capacity-with-our-new-datacenter-in-pecos/" target="_blank" rel="noopener">微软宣布在 Pecos 新建数据中心园区，继续扩 AI 算力容量</a></h3>
+      <p class="summary">微软宣布将在美国得州 Pecos 新建约 2GW 级数据中心园区，以满足 AI 与云服务需求。资本开支仍然集中流向电力、算力和长期基础设施，说明云厂商还在为下一轮模型与推理需求提前卡位。</p>
+    </article>
+    <article class="item readable">
+      <div class="time">06月22日（海外原站日期） · Meta</div>
+      <h3><a href="https://about.fb.com/news/2026/06/instagram-for-tv-gets-bigger-with-new-ways-to-watch-together/" target="_blank" rel="noopener">Meta 扩大 Instagram for TV，继续争夺客厅入口</a></h3>
+      <p class="summary">Meta 把 Instagram for TV 推到更多电视终端，并补充共同观看和内容发现能力。它反映的是内容平台正在把短视频和社交分发从手机屏扩展到家庭大屏，延长观看时长并强化广告与创作者生态。</p>
+    </article>
+    <article class="item readable">
+      <div class="time">06月22日（海外原站日期） · NVIDIA</div>
+      <h3><a href="https://nvidianews.nvidia.com/news/europe-unveils-a-record-35-new-nvidia-ai-supercomputers" target="_blank" rel="noopener">欧洲宣布建设 35 台 NVIDIA AI 超级计算机</a></h3>
+      <p class="summary">NVIDIA 表示欧洲正推进 35 台 AI HPC 超级计算机项目，覆盖科研、工业和主权算力需求。科技主线仍然是“谁先把高性能算力铺到位，谁就先拥有模型训练、科学计算和产业升级的基础设施优势”。</p>
+    </article>
 
-    <h2>电商（国内外）</h2>
-    <article class="item readable"><div class="time">06月23日启动 · Amazon</div><h3><a href="https://www.aboutamazon.com/news/retail/amazon-prime-day-2026-date" target="_blank" rel="noopener">Amazon Prime Day 2026 于6月23日开启</a></h3><p class="summary">Prime Day 从6月23日持续至26日，覆盖服饰、美妆、家居、电子等35个以上品类。平台促销周期拉长，会员权益和 App 入口仍是转化核心。</p></article>
-    <article class="item readable"><div class="time">06月22日 · Walmart</div><h3><a href="https://corporate.walmart.com/news/2026/06/22/walmart-sets-the-vision-for-the-next-era-of-global-commerce-media" target="_blank" rel="noopener">Walmart 提出全球 commerce media 新愿景</a></h3><p class="summary">Walmart 将零售媒体能力扩展到美国、国际业务和 Sam's Club，说明海外电商增长越来越依赖广告网络、线下数据和会员资产协同。</p></article>
-    <article class="item readable"><div class="time">06月22日 21:59 · 中国新闻网</div><h3><a href="https://www.chinanews.com.cn/cj/2026/06-22/10645293.shtml" target="_blank" rel="noopener">“618”电商大促期间广东揽投快递包裹逾42亿件</a></h3><p class="summary">广东邮政快递业618期间累计揽投42.71亿件，同比增长10%。京东、顺丰等企业重点保障生鲜寄递，大促竞争继续向履约、冷链和产地协同延伸。</p></article>
-    <article class="item readable"><div class="time">06月22日 21:03 · 36氪</div><h3><a href="https://www.36kr.com/p/3864189754063493" target="_blank" rel="noopener">AI支付：微信、支付宝忙铺路，Agent还在学走路</a></h3><p class="summary">AI Agent 要真正完成交易，绕不开身份确认、风控、支付授权和售后链路。对淘宝、京东、抖音、小红书等平台来说，可信支付是从推荐到成交的最后一公里。</p></article>
-    <article class="item readable"><div class="time">06月22日 18:21 · 中国新闻网</div><h3><a href="https://www.chinanews.com.cn/cj/2026/06-22/10645143.shtml" target="_blank" rel="noopener">云南省茶业协会呼吁整顿普洱茶直播间乱象</a></h3><p class="summary">普洱茶直播间乱象被行业协会点名，直播电商治理从平台规则走向行业自律与监管联动。抖音、快手、小红书等内容平台的茶类销售也会受到更高合规要求影响。</p></article>
+    <h2>电商（国内外合计 3 条）</h2>
+    <article class="item readable">
+      <div class="time">06月23日 · 深圳新闻网</div>
+      <h3><a href="https://www.sznews.com/news/content/2026-06/23/content_32099121.htm" target="_blank" rel="noopener">京东“618”购买力广东全国第一，深圳全省最强</a></h3>
+      <p class="summary">深圳晚报披露 2026 年京东 618 收官后，广东继续领跑购买力，深圳维持省内最强，湛江和茂名分别在增速和 AI 产品渗透率上突出。中报视角下，这说明大促竞争已从单纯低价转向区域消费升级与品类结构升级。</p>
+    </article>
+    <article class="item readable">
+      <div class="time">06月23日 · 深圳新闻网</div>
+      <h3><a href="https://www.sznews.com/news/content/2026-06/23/content_32099120.htm" target="_blank" rel="noopener">一条“野生”短视频带来百万订单，深圳“00后”在美国卖爆 AI 眼镜</a></h3>
+      <p class="summary">宝安团队借助 TikTok 上真实工种的原生短视频，把 Lusby AI 智能眼镜卖进美国市场，单月销售额在黑五期间跃升至 100 万美元。跨境电商的新变化不是只拼投流，而是拼内容原生感、达人匹配和高客单新硬件。</p>
+    </article>
+    <article class="item readable">
+      <div class="time">06月23日 · About Amazon</div>
+      <h3><a href="https://www.aboutamazon.com/news/retail/prime-day-2026-deals-preview" target="_blank" rel="noopener">Amazon 发布 Prime Day 2026 折扣前瞻</a></h3>
+      <p class="summary">Amazon 公布 Prime Day 2026 重点优惠方向，覆盖服饰、电子、美妆与 Amazon Haul 等多个入口。海外电商平台的策略仍然是通过长促期、会员权益和多入口联动，尽早把用户加入愿望单并锁定转化。</p>
+    </article>
 
     <h2>今日观察</h2>
-    <div class="brief readable"><p><strong>1.</strong> AI 正在同时进入商家经营和消费者决策，但信任问题会决定落地速度。</p><p><strong>2.</strong> 科技投资主线仍围绕 AI 基础设施：芯片、光模块、手机入口和商业航天都在争夺长期资本。</p><p><strong>3.</strong> 国内外电商都进入大促密集期，平台增长越来越依赖广告系统、会员体系和 AI 工具，而不是单纯价格战。</p></div>
+    <div class="brief readable">
+      <p><strong>1.</strong> AI 厂商上午释放的信息不再只讲模型参数，而是集中讲 Agent、补丁、生产力和企业落地，竞争维度已经进入“谁更能交付结果”。</p>
+      <p><strong>2.</strong> 科技基础设施投资还在加码，微软和 NVIDIA 的动作说明，算力、电力和终端分发依旧是 2026 年最硬的主线。</p>
+      <p><strong>3.</strong> 电商进入结构化竞争阶段，国内大促看区域消费分层，跨境卖家看内容原生化，海外平台则继续用会员和长周期促销做留存。</p>
+    </div>
 
-    <footer>本页由本地日报脚本生成并发布到 GitHub Pages。新闻链接均指向原始正文页；本版按“06月22日晚间或06月23日”规则重抓，类目内不超过5条，并排除旧内容与重复内容。</footer>
+    <footer>本页由本地自动化生成并发布到 GitHub Pages。海外原站保留原文直达链接，页面内标题与摘要统一使用中文；已根据本地去重记录排除早报和历史重复项。</footer>
   </main>
 
   <script>
@@ -125,22 +169,139 @@
     const progressText = document.getElementById('progressText');
     const rateText = document.getElementById('rateText');
     const rateBtns = Array.from(document.querySelectorAll('.rateBtn'));
-    let voices = [], chunks = [], chunkIndex = 0, speaking = false, seeking = false, readRate = 1;
-    function collectText() { return Array.from(document.querySelectorAll('.readable, #readableIntro, .item')).map(el => el.innerText.replace(/\s+/g, ' ').trim()).filter(Boolean).join('。'); }
-    function splitText(text) { return (text.match(/[^。！？!?；;]{1,120}[。！？!?；;]?/g) || [text]).map(p => p.trim()).filter(Boolean); }
-    function loadVoices() { voices = synth ? synth.getVoices() : []; const preferred = voices.filter(v => /zh|Chinese|Mandarin|普通话|中文|Xiaoxiao|Huihui|Yaoyao|Tingting|Hanhan/i.test(v.name + v.lang)); const femaleHints = preferred.filter(v => /Female|Xiaoxiao|Huihui|Yaoyao|Tingting|Hanhan|晓|瑶|婷婷|女/i.test(v.name)); const list = femaleHints.length ? femaleHints : (preferred.length ? preferred : voices); voiceSelect.innerHTML = ''; list.forEach((v,i)=>{ const option=document.createElement('option'); option.value=voices.indexOf(v); option.textContent=`${v.name} (${v.lang})`; voiceSelect.appendChild(option); if(i===0) voiceSelect.value=option.value; }); if(!list.length){ const option=document.createElement('option'); option.textContent='浏览器默认女声'; option.value='-1'; voiceSelect.appendChild(option); } }
-    function updateProgress(){ const pct = chunks.length ? Math.round((chunkIndex / chunks.length) * 100) : 0; progressRange.value=String(Math.min(100,pct)); progressText.textContent=`${Math.min(100,pct)}%`; }
-    function utterCurrent(){ if(!synth || chunkIndex >= chunks.length){ speaking=false; updateProgress(); return; } speaking=true; const u=new SpeechSynthesisUtterance(chunks[chunkIndex]); const selected=voices[Number(voiceSelect.value)]; if(selected) u.voice=selected; u.lang=selected?.lang || 'zh-CN'; const style=styleSelect.value; u.rate=style==='news'?readRate*1.02:style==='bright'?readRate*1.05:readRate*0.96; u.pitch=style==='news'?1.02:style==='bright'?1.18:1.08; u.volume=1; u.onend=()=>{ if(!seeking){ chunkIndex += 1; updateProgress(); utterCurrent(); } }; synth.speak(u); }
-    function startFrom(index=chunkIndex){ if(!synth) return alert('当前浏览器不支持语音播报'); synth.cancel(); chunks=splitText(collectText()); chunkIndex=Math.max(0, Math.min(index, chunks.length-1)); updateProgress(); utterCurrent(); }
-    playBtn.addEventListener('click',()=>{ if(synth.paused){ synth.resume(); speaking=true; return; } if(!speaking) startFrom(chunkIndex); });
-    pauseBtn.addEventListener('click',()=>{ if(synth?.speaking) synth.pause(); });
-    stopBtn.addEventListener('click',()=>{ if(synth) synth.cancel(); speaking=false; chunkIndex=0; updateProgress(); });
-    progressRange.addEventListener('input',()=>{ chunks=splitText(collectText()); const next=Math.floor((Number(progressRange.value)/100)*chunks.length); chunkIndex=Math.max(0,Math.min(next,chunks.length-1)); updateProgress(); });
-    progressRange.addEventListener('change',()=>{ if(!chunks.length) chunks=splitText(collectText()); seeking=true; if(synth) synth.cancel(); seeking=false; startFrom(chunkIndex); });
-    rateBtns.forEach(btn=>btn.addEventListener('click',()=>{ readRate=Number(btn.dataset.rate); rateText.textContent=`${readRate}x`; rateBtns.forEach(b=>b.classList.toggle('active', b===btn)); if(speaking) startFrom(chunkIndex); }));
-    voiceSelect.addEventListener('change',()=>{ if(speaking) startFrom(chunkIndex); });
-    styleSelect.addEventListener('change',()=>{ if(speaking) startFrom(chunkIndex); });
-    if(synth){ loadVoices(); synth.onvoiceschanged=loadVoices; }
+    let voices = [];
+    let chunks = [];
+    let chunkIndex = 0;
+    let speaking = false;
+    let seeking = false;
+    let readRate = 1;
+
+    function collectText() {
+      return Array.from(document.querySelectorAll('.readable, #readableIntro, .item'))
+        .map(el => el.innerText.replace(/\s+/g, ' ').trim())
+        .filter(Boolean)
+        .join('。');
+    }
+
+    function splitText(text) {
+      return (text.match(/[^。！？；]{1,120}[。！？；]?/g) || [text])
+        .map(part => part.trim())
+        .filter(Boolean);
+    }
+
+    function loadVoices() {
+      voices = synth ? synth.getVoices() : [];
+      const preferred = voices.filter(v => /zh|Chinese|Mandarin|普通话|中文|Xiaoxiao|Huihui|Yaoyao|Tingting|Hanhan/i.test(v.name + v.lang));
+      const femaleHints = preferred.filter(v => /Female|Xiaoxiao|Huihui|Yaoyao|Tingting|Hanhan|女/i.test(v.name));
+      const list = femaleHints.length ? femaleHints : (preferred.length ? preferred : voices);
+      voiceSelect.innerHTML = '';
+      list.forEach((voice, index) => {
+        const option = document.createElement('option');
+        option.value = String(voices.indexOf(voice));
+        option.textContent = `${voice.name} (${voice.lang})`;
+        voiceSelect.appendChild(option);
+        if (index === 0) voiceSelect.value = option.value;
+      });
+      if (!list.length) {
+        const option = document.createElement('option');
+        option.textContent = '浏览器默认语音';
+        option.value = '-1';
+        voiceSelect.appendChild(option);
+      }
+    }
+
+    function updateProgress() {
+      const pct = chunks.length ? Math.round((chunkIndex / chunks.length) * 100) : 0;
+      progressRange.value = String(Math.min(100, pct));
+      progressText.textContent = `${Math.min(100, pct)}%`;
+    }
+
+    function utterCurrent() {
+      if (!synth || chunkIndex >= chunks.length) {
+        speaking = false;
+        updateProgress();
+        return;
+      }
+      speaking = true;
+      const utterance = new SpeechSynthesisUtterance(chunks[chunkIndex]);
+      const selected = voices[Number(voiceSelect.value)];
+      if (selected) utterance.voice = selected;
+      utterance.lang = selected?.lang || 'zh-CN';
+      const style = styleSelect.value;
+      utterance.rate = style === 'news' ? readRate * 1.02 : style === 'bright' ? readRate * 1.05 : readRate * 0.96;
+      utterance.pitch = style === 'news' ? 1.02 : style === 'bright' ? 1.18 : 1.08;
+      utterance.volume = 1;
+      utterance.onend = () => {
+        if (!seeking) {
+          chunkIndex += 1;
+          updateProgress();
+          utterCurrent();
+        }
+      };
+      synth.speak(utterance);
+    }
+
+    function startFrom(index = chunkIndex) {
+      if (!synth) {
+        alert('当前浏览器不支持语音播报');
+        return;
+      }
+      synth.cancel();
+      chunks = splitText(collectText());
+      chunkIndex = Math.max(0, Math.min(index, Math.max(chunks.length - 1, 0)));
+      updateProgress();
+      utterCurrent();
+    }
+
+    playBtn.addEventListener('click', () => {
+      if (synth?.paused) {
+        synth.resume();
+        speaking = true;
+        return;
+      }
+      if (!speaking) startFrom(chunkIndex);
+    });
+
+    pauseBtn.addEventListener('click', () => {
+      if (synth?.speaking) synth.pause();
+    });
+
+    stopBtn.addEventListener('click', () => {
+      if (synth) synth.cancel();
+      speaking = false;
+      chunkIndex = 0;
+      updateProgress();
+    });
+
+    progressRange.addEventListener('input', () => {
+      chunks = splitText(collectText());
+      const next = Math.floor((Number(progressRange.value) / 100) * chunks.length);
+      chunkIndex = Math.max(0, Math.min(next, Math.max(chunks.length - 1, 0)));
+      updateProgress();
+    });
+
+    progressRange.addEventListener('change', () => {
+      if (!chunks.length) chunks = splitText(collectText());
+      seeking = true;
+      if (synth) synth.cancel();
+      seeking = false;
+      startFrom(chunkIndex);
+    });
+
+    rateBtns.forEach(btn => btn.addEventListener('click', () => {
+      readRate = Number(btn.dataset.rate);
+      rateText.textContent = `${readRate}x`;
+      rateBtns.forEach(other => other.classList.toggle('active', other === btn));
+      if (speaking) startFrom(chunkIndex);
+    }));
+
+    voiceSelect.addEventListener('change', () => { if (speaking) startFrom(chunkIndex); });
+    styleSelect.addEventListener('change', () => { if (speaking) startFrom(chunkIndex); });
+
+    if (synth) {
+      loadVoices();
+      synth.onvoiceschanged = loadVoices;
+    }
   </script>
 </body>
 </html>
