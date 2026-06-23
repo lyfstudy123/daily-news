@@ -3,594 +3,148 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>36氪/海外 AI、科技、电商日报 - 2026-06-22</title>
+  <title>每日早报 - 2026-06-23</title>
   <style>
-    :root {
-      --ink: #18202a;
-      --muted: #657181;
-      --line: #d9e0e8;
-      --soft: #f5f7fa;
-      --accent: #0f6f7c;
-      --accent2: #8a4b13;
-      --bg: #ffffff;
-    }
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      color: var(--ink);
-      background: #edf1f5;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft YaHei", Arial, sans-serif;
-      line-height: 1.68;
-    }
-    .page {
-      max-width: 980px;
-      margin: 24px auto;
-      background: var(--bg);
-      border: 1px solid var(--line);
-      padding: 34px 42px 46px;
-    }
-    h1 {
-      margin: 0 0 8px;
-      font-size: 30px;
-      line-height: 1.22;
-      letter-spacing: 0;
-    }
-    h2 {
-      margin: 34px 0 14px;
-      padding-top: 18px;
-      border-top: 2px solid var(--line);
-      font-size: 21px;
-    }
-    h3 {
-      margin: 20px 0 7px;
-      font-size: 17px;
-      line-height: 1.4;
-    }
-    p { margin: 7px 0; }
-    a { color: var(--accent); text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    .meta {
-      color: var(--muted);
-      font-size: 14px;
-      margin-bottom: 18px;
-    }
-    .brief {
-      background: var(--soft);
-      border-left: 4px solid var(--accent);
-      padding: 14px 16px;
-      margin: 18px 0 24px;
-    }
-    .weather {
-      display: grid;
-      grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.8fr);
-      gap: 16px;
-      align-items: stretch;
-      margin: 18px 0 24px;
-      border: 1px solid var(--line);
-      background: #fbfcfd;
-    }
-    .weather-now,
-    .weather-days {
-      padding: 14px 16px;
-    }
-    .weather-now {
-      border-right: 1px solid var(--line);
-      background: #f3f8f9;
-    }
-    .weather-title {
-      margin: 0 0 6px;
-      color: var(--muted);
-      font-size: 13px;
-    }
-    .weather-temp {
-      margin: 0;
-      font-size: 28px;
-      font-weight: 700;
-      line-height: 1.2;
-    }
-    .weather-desc {
-      margin: 6px 0 0;
-      color: #303a46;
-      font-size: 14px;
-    }
-    .weather-list {
-      display: grid;
-      grid-template-columns: repeat(5, minmax(0, 1fr));
-      gap: 8px;
-      margin: 0;
-    }
-    .weather-day {
-      min-height: 94px;
-      padding: 9px 8px;
-      border: 1px solid var(--line);
-      background: #ffffff;
-    }
-    .weather-day strong {
-      display: block;
-      margin-bottom: 4px;
-      font-size: 13px;
-    }
-    .weather-day span {
-      display: block;
-      color: var(--muted);
-      font-size: 12px;
-      line-height: 1.45;
-    }
-    .tag {
-      display: inline-block;
-      margin-right: 8px;
-      padding: 2px 8px;
-      border: 1px solid var(--line);
-      color: var(--muted);
-      font-size: 12px;
-      border-radius: 4px;
-      vertical-align: 1px;
-    }
-    .item {
-      padding: 14px 0 16px;
-      border-bottom: 1px solid var(--line);
-    }
-    .item:last-child { border-bottom: 0; }
-    .summary {
-      color: #303a46;
-    }
-    .take {
-      color: var(--accent2);
-      font-weight: 600;
-    }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin: 12px 0 6px;
-      font-size: 14px;
-    }
-    th, td {
-      border: 1px solid var(--line);
-      padding: 9px 10px;
-      text-align: left;
-      vertical-align: top;
-    }
-    th { background: var(--soft); }
-    .note {
-      margin-top: 18px;
-      color: var(--muted);
-      font-size: 13px;
-    }
-    .reader {
-      position: sticky;
-      top: 0;
-      z-index: 10;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      align-items: center;
-      margin: 20px 0 24px;
-      padding: 12px;
-      border: 1px solid var(--line);
-      background: rgba(255, 255, 255, 0.96);
-      box-shadow: 0 8px 18px rgba(24, 32, 42, 0.08);
-    }
-    .reader button {
-      min-height: 36px;
-      border: 1px solid #b9c4d1;
-      background: #ffffff;
-      color: var(--ink);
-      padding: 6px 12px;
-      border-radius: 4px;
-      cursor: pointer;
-      font-size: 14px;
-    }
-    .reader button.primary {
-      background: var(--accent);
-      border-color: var(--accent);
-      color: #ffffff;
-    }
-    .reader button:disabled {
-      cursor: not-allowed;
-      opacity: 0.48;
-    }
-    .reader label {
-      display: inline-flex;
-      gap: 8px;
-      align-items: center;
-      color: var(--muted);
-      font-size: 14px;
-    }
-    .reader input {
-      width: 116px;
-    }
-    .reader input[type="range"].progress {
-      flex: 1 1 220px;
-      min-width: 180px;
-    }
-    .reader .status {
-      min-width: 160px;
-      color: var(--muted);
-      font-size: 13px;
-    }
-    @media (max-width: 720px) {
-      .page { margin: 0; padding: 24px 18px 34px; border: 0; }
-      h1 { font-size: 24px; }
-      table { font-size: 13px; }
-      .reader { position: static; }
-      .reader button { flex: 1 1 80px; }
-      .reader .status { width: 100%; }
-      .weather { grid-template-columns: 1fr; }
-      .weather-now { border-right: 0; border-bottom: 1px solid var(--line); }
-      .weather-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-    }
+    :root { --ink:#18202a; --muted:#66717f; --line:#d8e0e8; --soft:#f6f8fb; --accent:#0f6f7c; --accent2:#9a5b18; --bg:#fff; }
+    * { box-sizing:border-box; }
+    body { margin:0; color:var(--ink); background:#edf1f5; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Microsoft YaHei",Arial,sans-serif; line-height:1.68; }
+    .page { max-width:980px; margin:24px auto; background:var(--bg); border:1px solid var(--line); padding:34px 42px 46px; }
+    h1 { margin:0 0 8px; font-size:30px; line-height:1.22; letter-spacing:0; }
+    h2 { margin:34px 0 14px; padding-top:18px; border-top:2px solid var(--line); font-size:21px; }
+    h3 { margin:20px 0 7px; font-size:17px; line-height:1.4; }
+    p { margin:7px 0; }
+    a { color:var(--accent); text-decoration:none; }
+    a:hover { text-decoration:underline; }
+    .meta { color:var(--muted); font-size:14px; margin-bottom:18px; }
+    .brief { background:var(--soft); border-left:4px solid var(--accent); padding:14px 16px; margin:18px 0 24px; }
+    .weather { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1.7fr); gap:0; border:1px solid var(--line); background:#fbfcfd; margin:18px 0 24px; }
+    .weather-now,.weather-days { padding:14px 16px; }
+    .weather-now { border-right:1px solid var(--line); background:#f3f8f9; }
+    .weather-title { color:var(--muted); font-size:13px; }
+    .weather-temp { font-size:34px; line-height:1.1; margin:6px 0; font-weight:700; }
+    .tag { display:inline-block; padding:2px 8px; border:1px solid var(--line); border-radius:999px; background:#fff; color:var(--muted); font-size:12px; margin-right:6px; }
+    .item { padding:14px 0; border-bottom:1px solid #edf1f5; }
+    .item:last-child { border-bottom:0; }
+    .time { color:var(--accent2); font-size:13px; font-weight:700; }
+    .source { color:var(--muted); font-size:13px; }
+    .summary { color:#2f3a46; }
+    .controls { position:sticky; top:0; z-index:5; margin:-34px -42px 24px; padding:14px 42px; background:rgba(255,255,255,.96); border-bottom:1px solid var(--line); backdrop-filter:blur(8px); }
+    .controls-row { display:flex; gap:10px; flex-wrap:wrap; align-items:center; }
+    button,select,input[type="range"] { font:inherit; }
+    button,select { border:1px solid var(--line); background:#fff; color:var(--ink); padding:8px 10px; border-radius:6px; }
+    button.primary { background:var(--accent); color:#fff; border-color:var(--accent); }
+    button.active { border-color:var(--accent); color:var(--accent); font-weight:700; }
+    .progress { display:grid; grid-template-columns:auto 1fr auto; gap:10px; align-items:center; margin-top:10px; color:var(--muted); font-size:13px; }
+    input[type="range"] { width:100%; accent-color:var(--accent); }
+    footer { margin-top:34px; padding-top:18px; border-top:1px solid var(--line); color:var(--muted); font-size:13px; }
+    @media (max-width:720px) { .page { margin:0; border:0; padding:22px 18px 34px; } .controls { margin:-22px -18px 22px; padding:12px 18px; } h1 { font-size:24px; } .weather { grid-template-columns:1fr; } .weather-now { border-right:0; border-bottom:1px solid var(--line); } .controls-row button,.controls-row select { flex:1 1 auto; min-width:96px; } }
   </style>
 </head>
 <body>
   <main class="page">
-    <h1>36氪/海外 AI、科技、电商日报</h1>
-    <div class="meta">生成时间：2026-06-22  中国时区 | 信息来源：36氪 AI频道、科技频道、电商快讯搜索、海外 AI 官方资讯条目、海外电商平台公开信息</div>
-
-    <section class="reader" aria-label="语音播报控制">
-      <button class="primary" id="readStart" type="button">开始播报</button>
-      <button id="readPause" type="button" disabled>暂停</button>
-      <button id="readStop" type="button" disabled>停止</button>
-      <label for="readRate">语速
-        <input id="readRate" type="range" min="0.7" max="1.5" step="0.1" value="1">
-      </label>
-      <label for="readProgress">进度
-        <input class="progress" id="readProgress" type="range" min="0" max="0" step="1" value="0">
-      </label>
-      <span class="status" id="readStatus">默认使用中文女声</span>
+    <section class="controls" aria-label="语音播报控制">
+      <div class="controls-row">
+        <button class="primary" id="playBtn">播放</button>
+        <button id="pauseBtn">暂停</button>
+        <button id="stopBtn">停止</button>
+        <select id="voiceSelect" title="系统女声"></select>
+        <select id="styleSelect" title="播报风格">
+          <option value="calm">柔和清晰</option>
+          <option value="news">新闻播报</option>
+          <option value="bright">清脆自然</option>
+        </select>
+        <button class="rateBtn" data-rate="0.85">0.85x</button>
+        <button class="rateBtn active" data-rate="1">1x</button>
+        <button class="rateBtn" data-rate="1.15">1.15x</button>
+        <button class="rateBtn" data-rate="1.3">1.3x</button>
+      </div>
+      <div class="progress">
+        <span id="progressText">0%</span>
+        <input id="progressRange" type="range" min="0" max="100" value="0" step="1" aria-label="播放进度">
+        <span id="rateText">1x</span>
+      </div>
     </section>
 
-    <section class="weather" aria-label="洛阳偃师天气">
+    <h1>每日早报：AI、科技与电商</h1>
+    <div class="meta">2026年06月23日 早间版 · 仅收录 06月23日与06月22日信息源 · 国内外合并更新</div>
+
+    <section class="brief" id="readableIntro">
+      <strong>今日主线：</strong>国内 AI 继续围绕大模型商业化、AI 购物与 AI 支付落地；科技板块聚焦光模块、芯片周期、AI 手机和商业航天；电商板块进入 618 后半段复盘，AI 对商家经营和消费者信任的影响同时显现。海外方面，Amazon Prime Day 与 Walmart Deals 正式进入促销窗口，OpenAI、Hugging Face 等继续释放前沿 AI 与开源生态动态。
+    </section>
+
+    <section class="weather">
       <div class="weather-now">
-        <p class="weather-title">洛阳偃师天气 | 2026-06-22 15:30 更新</p>
-        <p class="weather-temp">28°C 多云偏阴</p>
-        <p class="weather-desc">今日体感舒适，有间歇性阳光；最高 28°C，最低 20°C。外出推送和通勤场景适合提示防晒、补水。</p>
+        <div class="weather-title">洛阳偃师 · 今日天气</div>
+        <div class="weather-temp">约 21-30°C</div>
+        <p>早间以多云到阴为主，体感偏闷，午后注意防晒和补水。</p>
       </div>
       <div class="weather-days">
-        <div class="weather-list">
-          <div class="weather-day"><strong>6月22日 周一</strong><span>晴间多云</span><span>28°C / 20°C</span></div>
-          <div class="weather-day"><strong>6月23日 周二</strong><span>局部晴朗</span><span>31°C / 21°C</span></div>
-          <div class="weather-day"><strong>6月24日 周三</strong><span>晴，有少量云</span><span>32°C / 23°C</span></div>
-          <div class="weather-day"><strong>6月25日 周四</strong><span>云量变化</span><span>32°C / 22°C</span></div>
-          <div class="weather-day"><strong>6月26日 周五</strong><span>局部晴朗</span><span>30°C / 20°C</span></div>
-        </div>
+        <p><span class="tag">出行</span>上午通勤整体可行，带伞更稳妥。</p>
+        <p><span class="tag">穿衣</span>短袖为主，室内空调环境可备薄外套。</p>
+        <p><span class="tag">提醒</span>夏季午后天气变化快，外出留意临近预报。</p>
       </div>
     </section>
 
-    <section class="brief">
-      <p><strong>今日主线：</strong>AI 从“模型能力比拼”继续转向“成本、分发入口、真实场景和商业化回报”的竞争。科技板块中，算力、芯片、低空经济和即时零售服务创新共同构成今天的产业关键词。</p>
-      <p><strong>阅读建议：</strong>优先看 AI 视频成本下降、Agent 手机/微信 Agent、CPU/芯片算力回潮、电商平台服务升级这几条线。</p>
-    </section>
+    <h2>国内 AI</h2>
+    <article class="item readable"><div class="time">06月23日 08:54 · 36氪</div><h3><a href="https://www.36kr.com/p/3865046914503683" target="_blank" rel="noopener">大模型“倒爷”微软：GPT带到东方，DeepSeek卖给西方</a></h3><p class="summary">微软在全球大模型生态中的中间层角色更清晰：一边把 OpenAI 能力分发到企业和海外市场，一边把中国模型能力纳入自身云和工具链。</p></article>
+    <article class="item readable"><div class="time">06月23日 08:51 · 36氪</div><h3><a href="https://www.36kr.com/p/3865046429701379" target="_blank" rel="noopener">小扎“蒸馏员工”计划紧急喊停，私聊数据都泄露了</a></h3><p class="summary">Meta 相关 AI 内部数据使用引发隐私与合规争议，企业将员工沟通、知识库和模型训练打通时，边界治理比模型效果更早成为风险点。</p></article>
+    <article class="item readable"><div class="time">06月23日 08:05 · 36氪</div><h3><a href="https://www.36kr.com/p/3864887584986368" target="_blank" rel="noopener">超越Claude Mythos的AI模型，诞生了？</a></h3><p class="summary">新一轮模型比较继续围绕推理、代码和复杂任务展开。更值得看的是长任务、工具调用和真实工作流能力，而不只是榜单名次。</p></article>
+    <article class="item readable"><div class="time">06月22日 21:03 · 36氪</div><h3><a href="https://www.36kr.com/p/3864189754063493" target="_blank" rel="noopener">AI支付：微信、支付宝忙铺路，Agent还在学走路</a></h3><p class="summary">AI Agent 要真正完成交易，绕不开身份确认、风控、支付授权和售后链路。微信、支付宝先铺路，但“能推荐”和“能安全付款”之间还有明显距离。</p></article>
 
-    <h2>AI 相关重点</h2>
+    <h2>国内科技</h2>
+    <article class="item readable"><div class="time">06月23日 · 36氪</div><h3><a href="https://www.36kr.com/p/3864896857936898" target="_blank" rel="noopener">从华尔街到A股，为啥全世界都在赌光模块？</a></h3><p class="summary">AI 数据中心扩张带动高速互连需求，光模块成为算力基础设施中最受资本追逐的环节之一。</p></article>
+    <article class="item readable"><div class="time">06月23日 · 36氪</div><h3><a href="https://www.36kr.com/p/3864923039945734" target="_blank" rel="noopener">伯恩斯坦资深分析师：我们正处在第一次真正的芯片超级周期</a></h3><p class="summary">AI 算力、存储、先进封装和网络设备共同推动半导体需求扩张，本轮周期更像由云和 AI 投资驱动的结构性扩张。</p></article>
+    <article class="item readable"><div class="time">06月23日 · 36氪</div><h3><a href="https://www.36kr.com/p/3864388536679049" target="_blank" rel="noopener">第二代豆包AI手机定了，这次它不仅能替你点屏幕</a></h3><p class="summary">AI 手机从语音助手走向跨应用执行，核心看点是端侧权限、任务可靠性和用户是否愿意把高频操作交给 Agent。</p></article>
+    <article class="item readable"><div class="time">06月23日 · 36氪</div><h3><a href="https://www.36kr.com/p/3864906590065920" target="_blank" rel="noopener">竞逐商业航天：谁是中国版SpaceX？</a></h3><p class="summary">商业航天进入更密集的融资、发射和供应链竞争阶段。低成本发射、可复用技术和稳定订单，是国内玩家能否跨过概念期的关键。</p></article>
 
-    <article class="item">
-      <h3><span class="tag">AI视频</span><a href="https://www.36kr.com/p/3859562901846914">Token成本算盘打响，Seedance开始驶向“五环外”</a></h3>
-      <p class="summary">字节 Seedance2.0mini 以更低视频生成成本切入市场，文章认为 AI 视频需求已经从“能不能做”进入“多少钱做得出来”的阶段。短剧、广告、电商素材和中小创作者对成本更敏感，轻量化模型有机会把 AI 视频生产嵌进日常内容流程。</p>
-      <p class="take">判断：AI 视频竞争重心正在从单点效果转向单位成本、流程嵌入和规模化用户习惯。</p>
-    </article>
+    <h2>国内电商</h2>
+    <article class="item readable"><div class="time">06月22日 09:35 · 36氪</div><h3><a href="https://www.36kr.com/p/3863005381671810" target="_blank" rel="noopener">第一批消费者，已经开始抵制AI购物</a></h3><p class="summary">AI 购物助手在618期间获得尝鲜，但推荐不准、广告排序、隐私和平台封闭生态让用户产生抵触。短期更适合作为比价和参数对比工具。</p></article>
+    <article class="item readable"><div class="time">06月22日 09:00 · 36氪</div><h3><a href="https://www.36kr.com/p/3858672877048836" target="_blank" rel="noopener">今年618，AI帮商家“做好”生意</a></h3><p class="summary">阿里妈妈等平台工具强化 AI 投放、货品洞察和人群经营。平台竞争从单纯补贴转向效率、内容和经营能力。</p></article>
+    <article class="item readable"><div class="time">06月22日 21:03 · 36氪</div><h3><a href="https://www.36kr.com/p/3864189754063493" target="_blank" rel="noopener">AI支付与平台电商：从推荐到成交的最后一公里</a></h3><p class="summary">微信、支付宝的 AI 支付铺路，会影响淘宝、京东、抖音、小红书等平台的交易闭环。谁能把推荐、授权、付款和售后做得可信，谁就更接近下一代电商入口。</p></article>
 
-    <article class="item">
-      <h3><span class="tag">开发工具</span><a href="https://www.36kr.com/p/3859719588838280">Codex兼容国产开源模型，实测DeepSeek接入：门槛还是太高</a></h3>
-      <p class="summary">文章关注 Codex 与国产开源模型的兼容实践，结论偏谨慎：技术上可以接入，但真实使用门槛和体验还有距离。对企业和开发者而言，本地/国产模型接入编码 Agent 仍需要更友好的工程化封装。</p>
-      <p class="take">判断：AI 编程工具的下一步不是“能跑”，而是降低配置、模型选择和上下文管理成本。</p>
-    </article>
+    <h2>海外 AI</h2>
+    <article class="item readable"><div class="time">06月23日 · OpenAI</div><h3><a href="https://openai.com/index/patch-the-planet/" target="_blank" rel="noopener">OpenAI：Patch the Planet</a></h3><p class="summary">OpenAI 发布与气候、地球系统和科学问题相关的项目叙事，重点是用 AI 改善复杂系统建模、研究协作和实际问题求解。</p></article>
+    <article class="item readable"><div class="time">06月22日 · Hugging Face</div><h3><a href="https://huggingface.co/blog" target="_blank" rel="noopener">Hugging Face：PP-OCRv6 与开放模型社区更新</a></h3><p class="summary">Hugging Face 6月22日更新包含多语言 OCR、开放模型评测和开发者工具内容，显示开源生态继续围绕低成本部署、多模态和 Agent 工具链扩展。</p></article>
+    <article class="item readable"><div class="time">06月22日 · Google AI for Developers</div><h3><a href="https://ai.google.dev/gemini-api/docs/changelog" target="_blank" rel="noopener">Gemini API 更新：模型与接口变更提醒</a></h3><p class="summary">Gemini API changelog 持续更新模型可用性和接口变化。开发者需要关注模型弃用、版本切换和速率限制对线上项目的影响。</p></article>
 
-    <article class="item">
-      <h3><span class="tag">商业化</span><a href="https://www.36kr.com/p/3862676976712582">大模型公司的“收入幻觉”</a></h3>
-      <p class="summary">文章讨论大模型公司收入结构被重新审视的问题：在上市、估值和第五套标准等背景下，市场会更关注收入是否真正来自模型能力本身，而不是项目、集成、转售或短期资源置换。</p>
-      <p class="take">判断：AI 公司估值叙事会逐渐从“参数和融资”转向可持续毛利、客户留存和收入质量。</p>
-    </article>
+    <h2>海外电商</h2>
+    <article class="item readable"><div class="time">06月23日启动 · Amazon</div><h3><a href="https://www.aboutamazon.com/news/retail/amazon-prime-day-2026-date" target="_blank" rel="noopener">Amazon Prime Day 2026 于6月23日开启</a></h3><p class="summary">Prime Day 从6月23日持续至26日，覆盖服饰、美妆、家居、电子等35个以上品类。平台促销周期拉长，会员权益和 App 入口仍是转化核心。</p></article>
+    <article class="item readable"><div class="time">06月22日 · Walmart</div><h3><a href="https://corporate.walmart.com/news/2026/06/22/walmart-sets-the-vision-for-the-next-era-of-global-commerce-media" target="_blank" rel="noopener">Walmart 提出全球 commerce media 新愿景</a></h3><p class="summary">Walmart 将零售媒体能力扩展到美国、国际业务和 Sam's Club，海外电商增长越来越依赖广告网络、线下数据和会员资产协同。</p></article>
+    <article class="item readable"><div class="time">06月22日进行中 · Walmart</div><h3><a href="https://corporate.walmart.com/news/2026/06/09/walmart-deals-returns-june-22-through-28-2026" target="_blank" rel="noopener">Walmart Deals 6月22日至28日回归</a></h3><p class="summary">Walmart Deals 覆盖数千个优惠，并为 Walmart+ 会员提供提前访问权益。与 Amazon Prime Day 同期，海外大促竞争升级为跨平台会员战。</p></article>
 
-    <article class="item">
-      <h3><span class="tag">终端入口</span><a href="https://www.36kr.com/p/3863704272534408">AI手机还没普及Agent手机又爆了？拆解八大手机巨头的AI底牌</a></h3>
-      <p class="summary">手机厂商开始把 AI 手机升级为 Agent 手机叙事，核心不只是端侧模型，而是系统级入口、跨应用执行、个人数据和场景闭环。文章梳理多家手机巨头的 AI 底牌，显示终端厂商正试图把 Agent 变成下一轮换机和生态竞争抓手。</p>
-      <p class="take">判断：Agent 的胜负很可能落在系统权限、入口频次和服务生态，而不只落在模型参数。</p>
-    </article>
+    <h2>今日观察</h2>
+    <div class="brief readable"><p><strong>1.</strong> AI 正在同时进入商家经营和消费者决策，但信任问题会决定落地速度。</p><p><strong>2.</strong> 科技投资主线仍围绕 AI 基础设施：芯片、光模块、手机入口和商业航天都在争夺长期资本。</p><p><strong>3.</strong> 国内外电商都进入大促密集期，平台增长越来越依赖广告系统、会员体系和 AI 工具，而不是单纯价格战。</p></div>
 
-    <article class="item">
-      <h3><span class="tag">平台入口</span><a href="https://www.36kr.com/information/technology/">微信Agent“小微”亮相：能力是明牌，边界才是真正的悬念</a></h3>
-      <p class="summary">36氪科技频道显示，微信 Agent “小微”成为今日热议条目。它的看点在于微信拥有高频入口和庞大服务生态，但边界、开放方式、开发者关系与用户隐私保护将决定它能走多远。</p>
-      <p class="take">判断：微信若把 Agent 做成基础能力，电商、外卖、出行、内容和本地生活都会被重新接入。</p>
-    </article>
-
-    <h2>科技相关重点</h2>
-
-    <article class="item">
-      <h3><span class="tag">即时零售</span><a href="https://www.36kr.com/p/3863831007941638">淘宝闪购上线新业务“家宴”，联合米其林高星餐厅</a></h3>
-      <p class="summary">淘宝闪购在成都、深圳灰测高端外卖项目“家宴”，联合米其林星级和头部中餐品牌，计划把正式宴席的套餐、包装、履约和服务流程重新产品化。项目预计继续向北京、上海、杭州等城市开放。</p>
-      <p class="take">判断：即时零售平台正在从补贴和低价竞争，转向高客单价、服务标准化和品类创新。</p>
-    </article>
-
-    <article class="item">
-      <h3><span class="tag">芯片算力</span><a href="https://www.36kr.com/p/3863752941458436">两个月融资两轮，智子芯元盯上芯片里没释放的算力</a></h3>
-      <p class="summary">文章关注芯片算力利用率和释放效率问题。随着 AI 算力需求走高，市场不仅追逐新增 GPU/ASIC，也开始寻找存量芯片和系统层面未被充分释放的性能空间。</p>
-      <p class="take">判断：算力基础设施会从“买更多卡”进入“榨出更多有效算力”的阶段。</p>
-    </article>
-
-    <article class="item">
-      <h3><span class="tag">低空经济</span><a href="https://www.36kr.com/p/3863681803130117">空域重构，低空经济“拐点”已至</a></h3>
-      <p class="summary">低空经济的关键变量不只是飞行器，而是空域管理、城市基础设施、监管协同和商业场景。文章把“空域重构”视作行业拐点，意味着地方竞争会从项目展示转向体系能力建设。</p>
-      <p class="take">判断：低空经济商业化速度取决于监管、航线、起降点和安全运营体系能否同步成熟。</p>
-    </article>
-
-    <article class="item">
-      <h3><span class="tag">半导体</span><a href="https://www.36kr.com/p/3862378039284997">比肩存储，韩国盯上功率半导体</a></h3>
-      <p class="summary">AI 数据中心、新能源和工业电气化带动功率半导体进入新周期。韩国相关产业开始将功率半导体放到接近存储芯片的重要位置，试图抓住下一轮结构性机会。</p>
-      <p class="take">判断：AI 基建的外溢需求正在拉动电源管理、功率器件和能源效率产业链。</p>
-    </article>
-
-    <article class="item">
-      <h3><span class="tag">CPU</span><a href="https://www.36kr.com/p/3863489132287236">CPU杀回牌桌，一场1700亿美元的“上位”大戏开启</a></h3>
-      <p class="summary">文章认为 AI 从训练走向推理和 Agent 后，CPU 的价值被重新放大。推理调度、数据处理、复杂业务编排会让 CPU 在 AI 基础设施中重新获得更高权重。</p>
-      <p class="take">判断：AI 硬件竞争会更像系统工程，GPU、CPU、内存、网络和软件栈共同决定成本效率。</p>
-    </article>
-
-    <h2>国内电商资讯</h2>
-    <p class="meta">时间筛选：仅收录 2026-06-21 至 2026-06-22 发布或更新的国内电商相关资讯。</p>
-    <article class="item">
-      <h3><span class="tag">6月22日</span><a href="https://www.36kr.com/p/3863831007941638">淘宝闪购上线新业务“家宴”，联合米其林高星餐厅</a></h3>
-      <p class="summary">淘宝闪购在成都、深圳灰测高端外卖项目“家宴”，联合米其林星级和头部中餐品牌，计划把正式宴席的套餐、包装、履约和服务流程重新产品化。</p>
-      <p class="take">判断：即时零售平台正在从补贴和低价竞争，转向高客单价、服务标准化和品类创新。</p>
-    </article>
-    <article class="item">
-      <h3><span class="tag">6月22日</span><a href="https://www.36kr.com/p/3862199404807945">2026年618，AI购物还没翻盘</a></h3>
-      <p class="summary">文章复盘 618 期间 AI 购物助手和智能导购的真实表现，认为 AI 仍未在大促中成为决定性流量入口。用户决策、商品数据、价格机制和平台信任仍是影响转化的关键。</p>
-      <p class="take">判断：AI 电商短期更像运营提效工具，距离重塑消费者购物入口还有一段路。</p>
-    </article>
-    <article class="item">
-      <h3><span class="tag">6月21日</span><a href="https://www.36kr.com/p/3861825558071688">2026年618：外卖深度卷入，AI仍在场外观战</a></h3>
-      <p class="summary">文章指出今年 618 的竞争更偏向即时零售、外卖和本地履约，AI 更多停留在辅助运营和营销层面，尚未成为主导大促的新变量。</p>
-      <p class="take">判断：电商增长核心仍在履约、补贴、供给和场景扩展，AI 的价值需要通过具体链路效率体现。</p>
-    </article>
-    <article class="item">
-      <h3><span class="tag">6月21日</span><a href="https://www.36kr.com/p/3860729850580225">跨境电商，决战北欧</a></h3>
-      <p class="summary">文章关注中国跨境电商在北欧市场的竞争，北欧消费者对品质、合规、物流和可持续要求更高，平台和卖家需要从低价扩张转向本地化运营。</p>
-      <p class="take">判断：跨境电商进入更成熟市场时，供应链、合规和品牌能力会比单纯价格更重要。</p>
-    </article>
-
-    <h2>海外 AI 资讯</h2>
-    <p class="meta">时间筛选：仅收录 2026-06-20 至 2026-06-22 发布或更新、且可直接打开正文的海外 AI 资讯。</p>
-    <article class="item">
-      <h3><span class="tag">6月21日</span><a href="https://openai.com/index/samsung-electronics-chatgpt-codex-deployment/">OpenAI：Samsung Electronics brings ChatGPT and Codex to employees</a></h3>
-      <p class="summary">OpenAI 宣布三星电子将在韩国员工及全球 Device eXperience 部门部署 ChatGPT Enterprise 和 Codex，用于研发、制造、营销、产品开发和企业职能等场景。公告称这是 OpenAI 迄今最大的企业部署之一，Codex 每周活跃用户已超过 500 万。</p>
-      <p class="take">判断：前沿 AI 正从“工具试用”进入大型企业全员级部署，编码工具也开始覆盖非技术岗位的自动化工作流。</p>
-    </article>
-    <article class="item">
-      <h3><span class="tag">6月21日</span><a href="https://www.buildfastwithai.com/blogs/ai-news-today-june-21-2026">Build Fast with AI：AI News Today - June 21, 2026</a></h3>
-      <p class="summary">该日报汇总 6 月 21 日 16 条 AI 进展，包括 Anthropic Fable 5 / Mythos 5 仍处于访问受限状态、Gemini 3.5 Pro 仍未公开发布、AI 数据中心电力监管、Amazon 放弃 Sam Altman 电影项目，以及 xAI Grok 4.3 接入 Amazon Bedrock 等。</p>
-      <p class="take">判断：6 月海外 AI 主线是模型发布密集化、监管约束上升、云平台分发加速，企业架构需要避免绑定单一模型供应商。</p>
-    </article>
-    <article class="item">
-      <h3><span class="tag">6月21日</span><a href="https://www.newsfilecorp.com/release/302286/Aether-AI-Raises-20-Million-Seed-Round-to-Build-Causal-World-Models-for-the-Next-Era-of-AI">Aether AI：融资 2000 万美元建设 Causal World Models</a></h3>
-      <p class="summary">Aether AI 宣布完成 2000 万美元种子轮融资，用于推进因果世界模型研发、工程基础设施和物理 AI / 机器人商业部署。公司强调，相比依赖相关性的 LLM 和 VLA 系统，因果推理可能提升真实世界泛化和可靠性。</p>
-      <p class="take">判断：世界模型和物理 AI 仍是海外早期融资热点，资金开始流向“能解释和预测真实世界”的模型路线。</p>
-    </article>
-    <article class="item">
-      <h3><span class="tag">6月21日</span><a href="https://www.digitalapplied.com/blog/advertising-mcp-servers-pinterest-microsoft-2026-guide">Digital Applied：Pinterest 与 Microsoft 推出广告 MCP Servers</a></h3>
-      <p class="summary">文章梳理 Pinterest 和 Microsoft 广告 MCP Server 的上线背景，指出广告平台正在把报表、洞察、投放对象和营销工作流接入 AI Agent。文中列出 Google、Meta、Amazon、TikTok 等平台的 MCP/Agent 化趋势。</p>
-      <p class="take">判断：MCP 正从开发者工具扩展到广告营销场景，AI Agent 的商业落地会先在可量化、可自动化的运营流程中发生。</p>
-    </article>
-    <article class="item">
-      <h3><span class="tag">6月21日</span><a href="https://www.infostealers.com/article/supercomputing-on-a-credit-card-from-the-ai-rush-enabled-the-massive-fortibleed-campaign/">InfoStealers：AI 算力租赁助推 FortiBleed 攻击规模化</a></h3>
-      <p class="summary">Hudson Rock 旗下 InfoStealers 分析 FortiBleed 活动，称攻击者通过 Vast.ai 租用去中心化 GPU 集群，以低成本获得可观算力，用于大规模凭据破解和后续供应链横向移动。文章把生成式 AI 算力热潮与网络攻击门槛下降联系起来。</p>
-      <p class="take">判断：AI 基础设施的普及不只利好开发者，也降低了攻击者获取高性能计算资源的成本。</p>
-    </article>
-    <article class="item">
-      <h3><span class="tag">6月20日</span><a href="https://buttondown.com/soumyo/archive/ai-builders-digest-saturday-june-20-2026/">AI Builders Digest：Claude Code 可发布团队共享文档</a></h3>
-      <p class="summary">AI Builders Digest 6 月 20 日简报提到，Claude Code 面向 Team 和 Enterprise 用户推出 Artifacts 能力，可把编码会话中的交互式 HTML 页面发布为团队私有链接，用于 PR 讲解、项目看板或架构说明。</p>
-      <p class="take">判断：AI 编码工具正在从“替你写代码”转向“把工程过程本身产品化”，团队协作和可视化交付会成为新卖点。</p>
-    </article>
-
-    <h2>海外电商观察</h2>
-    <article class="item">
-      <h3><span class="tag">Amazon</span><a href="https://www.aboutamazon.com/news/retail/amazon-prime-day-2026">Amazon Prime Day 2026：6月23日至26日开启</a></h3>
-      <p class="summary">Amazon 宣布 2026 年 Prime Day 将于 6 月 23 日至 26 日举行，继续把会员大促前置到夏季消费节点。对卖家而言，库存、广告、折扣节奏和物流履约会成为关键变量。</p>
-      <p class="take">判断：Amazon 仍在用会员大促绑定消费频次，跨境卖家需要更早规划促销和仓配。</p>
-    </article>
-    <article class="item">
-      <h3><span class="tag">Walmart</span><a href="https://corporate.walmart.com/news">Walmart：Deals 大促与跨境履约能力继续增强</a></h3>
-      <p class="summary">Walmart 近期围绕 Deals 大促、Marketplace 和跨境配送持续加码，与 Amazon 的会员大促形成正面对比。其电商增长重点在价格、履约和第三方商家生态。</p>
-      <p class="take">判断：美国电商竞争不只是流量竞争，更是平台履约、广告工具和卖家服务能力竞争。</p>
-    </article>
-    <article class="item">
-      <h3><span class="tag">Shopify</span><a href="https://www.shopify.com/editions/spring2026">Shopify Spring ’26：独立站工具继续扩容</a></h3>
-      <p class="summary">Shopify Spring ’26 更新强调商家后台、AI 辅助、结账、营销和跨境能力，面向中小商家的工具链进一步一体化。对品牌商而言，独立站仍是降低平台依赖的重要渠道。</p>
-      <p class="take">判断：独立站竞争会从建站转向 AI 运营、支付转化和多渠道数据整合。</p>
-    </article>
-    <article class="item">
-      <h3><span class="tag">eBay</span><a href="https://www.ebay.com/sellercenter/resources/seller-updates">eBay Seller Updates：卖家工具与平台规则更新</a></h3>
-      <p class="summary">eBay 卖家中心持续发布工具、政策和交易体验更新，重点服务存量卖家提升刊登、定价、履约和售后效率。适合跨境卖家跟踪规则变化，避免促销期运营风险。</p>
-      <p class="take">判断：成熟电商平台的增长更多来自卖家效率和交易体验细节，而不是单纯扩品类。</p>
-    </article>
-
-    <h2>今日推送版摘要</h2>
-    <p>1. AI 视频进入成本战：Seedance2.0mini 把视频生成价格拉低，短剧、广告和电商素材创作正在从“尝鲜”转向“算账”。</p>
-    <p>2. Agent 入口竞争升温：手机厂商、微信和开发工具都在争夺系统级执行入口，模型能力只是其中一环。</p>
-    <p>3. AI 商业化开始看收入质量：大模型公司需要证明收入来自可持续模型能力，而不是一次性项目或资源转售。</p>
-    <p>4. 科技硬件回到系统效率：CPU、功率半导体、芯片算力释放成为 AI 基建的关键变量。</p>
-    <p>5. 国内电商限定近两天：淘宝闪购“家宴”、AI购物尚未翻盘、外卖深度卷入618、跨境电商决战北欧，共同指向履约、服务和本地化运营竞争。</p>
-    <p>6. 海外 AI 资讯限定近三天：OpenAI 三星部署、6月21日 AI 日报、Aether AI 融资、广告 MCP Server、FortiBleed 算力滥用、Claude Code 团队文档。</p>
-    <p>7. 海外电商进入年中大促周期：Amazon Prime Day、Walmart Deals、Shopify 工具更新和 eBay 卖家政策共同指向跨境卖家运营效率竞争。</p>
-
-    <p class="note">说明：本文件为本地 HTML 文档，可直接用浏览器打开或转发文件给他人查看。若需要公网链接，需要上传到网盘、企业文档或内部知识库后分享。</p>
+    <footer>本页由本地日报脚本生成并发布到 GitHub Pages。新闻链接均指向原始页面；已按“当天或前一天”规则排除旧内容。</footer>
   </main>
+
   <script>
-    (() => {
-      const startButton = document.getElementById("readStart");
-      const pauseButton = document.getElementById("readPause");
-      const stopButton = document.getElementById("readStop");
-      const rateInput = document.getElementById("readRate");
-      const progressInput = document.getElementById("readProgress");
-      const status = document.getElementById("readStatus");
-      const synth = window.speechSynthesis;
-      let utterance = null;
-      let isPaused = false;
-      let chunks = [];
-      let chunkIndex = 0;
-      let sessionId = 0;
-      let manualStop = false;
-
-      const buildChunks = () => {
-        const source = document.querySelector(".page").cloneNode(true);
-        source.querySelector(".reader")?.remove();
-        source.querySelectorAll("a").forEach((link) => {
-          link.replaceWith(document.createTextNode(link.textContent));
-        });
-        const blockSelectors = "h1, h2, h3, p, td";
-        return [...source.querySelectorAll(blockSelectors)]
-          .map((node) => node.innerText.replace(/\s+/g, " ").trim())
-          .filter(Boolean);
-      };
-
-      const setReadingState = (reading) => {
-        startButton.disabled = reading;
-        pauseButton.disabled = !reading;
-        stopButton.disabled = !reading;
-      };
-
-      const setProgress = () => {
-        progressInput.max = Math.max(chunks.length - 1, 0);
-        progressInput.value = Math.min(chunkIndex, Math.max(chunks.length - 1, 0));
-      };
-
-      const chooseFemaleVoice = () => {
-        const voices = synth.getVoices();
-        const zhVoices = voices.filter((voice) => voice.lang.startsWith("zh"));
-        const femaleNameHints = [
-          "xiaoxiao",
-          "xiaoyi",
-          "huihui",
-          "yaoyao",
-          "hanhan",
-          "kangkang",
-          "xiaomeng",
-          "xiaoqiu",
-          "female",
-          "woman",
-          "girl",
-          "女"
-        ];
-        const femaleVoice = zhVoices.find((voice) => {
-          const name = voice.name.toLowerCase();
-          return femaleNameHints.some((hint) => name.includes(hint));
-        });
-        if (femaleVoice) return femaleVoice;
-        return voices.find((voice) => voice.lang === "zh-CN")
-          || voices.find((voice) => voice.lang.startsWith("zh"))
-          || null;
-      };
-
-      const stopReading = () => {
-        manualStop = true;
-        sessionId += 1;
-        synth.cancel();
-        utterance = null;
-        isPaused = false;
-        pauseButton.textContent = "暂停";
-        setReadingState(false);
-        status.textContent = "已停止";
-      };
-
-      const speakFrom = (index) => {
-        if (!("speechSynthesis" in window)) {
-          status.textContent = "当前浏览器不支持语音播报";
-          return;
-        }
-        if (!chunks.length) chunks = buildChunks();
-        if (!chunks.length) {
-          status.textContent = "没有可播报的正文";
-          return;
-        }
-        const activeSession = sessionId;
-        manualStop = false;
-        chunkIndex = Math.max(0, Math.min(index, chunks.length - 1));
-        setProgress();
-        synth.cancel();
-        utterance = new SpeechSynthesisUtterance(chunks[chunkIndex]);
-        utterance.lang = "zh-CN";
-        utterance.rate = Number(rateInput.value);
-        utterance.pitch = 1;
-        const voice = chooseFemaleVoice();
-        if (voice) utterance.voice = voice;
-        utterance.onstart = () => {
-          setReadingState(true);
-          status.textContent = `正在播报 ${chunkIndex + 1}/${chunks.length}`;
-        };
-        utterance.onend = () => {
-          if (manualStop || activeSession !== sessionId) return;
-          if (chunkIndex < chunks.length - 1) {
-            chunkIndex += 1;
-            setProgress();
-            speakFrom(chunkIndex);
-            return;
-          }
-          utterance = null;
-          isPaused = false;
-          pauseButton.textContent = "暂停";
-          setReadingState(false);
-          status.textContent = "播报完成";
-        };
-        utterance.onerror = () => {
-          setReadingState(false);
-          status.textContent = "播报被浏览器中断";
-        };
-        synth.speak(utterance);
-      };
-
-      startButton.addEventListener("click", () => {
-        chunks = buildChunks();
-        sessionId += 1;
-        speakFrom(Number(progressInput.value) || 0);
-      });
-
-      pauseButton.addEventListener("click", () => {
-        if (!utterance) return;
-        if (isPaused) {
-          synth.resume();
-          isPaused = false;
-          pauseButton.textContent = "暂停";
-          status.textContent = "正在播报";
-        } else {
-          synth.pause();
-          isPaused = true;
-          pauseButton.textContent = "继续";
-          status.textContent = "已暂停";
-        }
-      });
-
-      stopButton.addEventListener("click", stopReading);
-
-      rateInput.addEventListener("change", () => {
-        if (utterance) {
-          status.textContent = "语速将在重新播报后生效";
-        }
-      });
-      progressInput.addEventListener("input", () => {
-        if (!chunks.length) chunks = buildChunks();
-        chunkIndex = Number(progressInput.value) || 0;
-        status.textContent = `已选择进度 ${chunkIndex + 1}/${chunks.length}`;
-      });
-      progressInput.addEventListener("change", () => {
-        if (!chunks.length) chunks = buildChunks();
-        chunkIndex = Number(progressInput.value) || 0;
-        if (utterance || synth.speaking || synth.paused) {
-          sessionId += 1;
-          isPaused = false;
-          pauseButton.textContent = "暂停";
-          speakFrom(chunkIndex);
-        }
-      });
-
-      window.addEventListener("beforeunload", () => synth.cancel());
-      chunks = buildChunks();
-      setProgress();
-      if (synth?.onvoiceschanged !== undefined) {
-        synth.onvoiceschanged = () => {
-          const voice = chooseFemaleVoice();
-          status.textContent = voice ? `默认女声：${voice.name}` : "默认使用中文女声";
-        };
-      }
-    })();
+    const synth = window.speechSynthesis;
+    const playBtn = document.getElementById('playBtn');
+    const pauseBtn = document.getElementById('pauseBtn');
+    const stopBtn = document.getElementById('stopBtn');
+    const voiceSelect = document.getElementById('voiceSelect');
+    const styleSelect = document.getElementById('styleSelect');
+    const progressRange = document.getElementById('progressRange');
+    const progressText = document.getElementById('progressText');
+    const rateText = document.getElementById('rateText');
+    const rateBtns = Array.from(document.querySelectorAll('.rateBtn'));
+    let voices = [], chunks = [], chunkIndex = 0, speaking = false, seeking = false, readRate = 1;
+    function collectText() { return Array.from(document.querySelectorAll('.readable, #readableIntro, .item')).map(el => el.innerText.replace(/\s+/g, ' ').trim()).filter(Boolean).join('。'); }
+    function splitText(text) { return (text.match(/[^。！？!?；;]{1,120}[。！？!?；;]?/g) || [text]).map(p => p.trim()).filter(Boolean); }
+    function loadVoices() { voices = synth ? synth.getVoices() : []; const preferred = voices.filter(v => /zh|Chinese|Mandarin|普通话|中文|Xiaoxiao|Huihui|Yaoyao|Tingting|Hanhan/i.test(v.name + v.lang)); const femaleHints = preferred.filter(v => /Female|Xiaoxiao|Huihui|Yaoyao|Tingting|Hanhan|晓|瑶|婷婷|女/i.test(v.name)); const list = femaleHints.length ? femaleHints : (preferred.length ? preferred : voices); voiceSelect.innerHTML = ''; list.forEach((v,i)=>{ const option=document.createElement('option'); option.value=voices.indexOf(v); option.textContent=`${v.name} (${v.lang})`; voiceSelect.appendChild(option); if(i===0) voiceSelect.value=option.value; }); if(!list.length){ const option=document.createElement('option'); option.textContent='浏览器默认女声'; option.value='-1'; voiceSelect.appendChild(option); } }
+    function updateProgress(){ const pct = chunks.length ? Math.round((chunkIndex / chunks.length) * 100) : 0; progressRange.value=String(Math.min(100,pct)); progressText.textContent=`${Math.min(100,pct)}%`; }
+    function utterCurrent(){ if(!synth || chunkIndex >= chunks.length){ speaking=false; updateProgress(); return; } speaking=true; const u=new SpeechSynthesisUtterance(chunks[chunkIndex]); const selected=voices[Number(voiceSelect.value)]; if(selected) u.voice=selected; u.lang=selected?.lang || 'zh-CN'; const style=styleSelect.value; u.rate=style==='news'?readRate*1.02:style==='bright'?readRate*1.05:readRate*0.96; u.pitch=style==='news'?1.02:style==='bright'?1.18:1.08; u.volume=1; u.onend=()=>{ if(!seeking){ chunkIndex += 1; updateProgress(); utterCurrent(); } }; synth.speak(u); }
+    function startFrom(index=chunkIndex){ if(!synth) return alert('当前浏览器不支持语音播报'); synth.cancel(); chunks=splitText(collectText()); chunkIndex=Math.max(0, Math.min(index, chunks.length-1)); updateProgress(); utterCurrent(); }
+    playBtn.addEventListener('click',()=>{ if(synth.paused){ synth.resume(); speaking=true; return; } if(!speaking) startFrom(chunkIndex); });
+    pauseBtn.addEventListener('click',()=>{ if(synth?.speaking) synth.pause(); });
+    stopBtn.addEventListener('click',()=>{ if(synth) synth.cancel(); speaking=false; chunkIndex=0; updateProgress(); });
+    progressRange.addEventListener('input',()=>{ chunks=splitText(collectText()); const next=Math.floor((Number(progressRange.value)/100)*chunks.length); chunkIndex=Math.max(0,Math.min(next,chunks.length-1)); updateProgress(); });
+    progressRange.addEventListener('change',()=>{ if(!chunks.length) chunks=splitText(collectText()); seeking=true; if(synth) synth.cancel(); seeking=false; startFrom(chunkIndex); });
+    rateBtns.forEach(btn=>btn.addEventListener('click',()=>{ readRate=Number(btn.dataset.rate); rateText.textContent=`${readRate}x`; rateBtns.forEach(b=>b.classList.toggle('active', b===btn)); if(speaking) startFrom(chunkIndex); }));
+    voiceSelect.addEventListener('change',()=>{ if(speaking) startFrom(chunkIndex); });
+    styleSelect.addEventListener('change',()=>{ if(speaking) startFrom(chunkIndex); });
+    if(synth){ loadVoices(); synth.onvoiceschanged=loadVoices; }
   </script>
 </body>
 </html>
